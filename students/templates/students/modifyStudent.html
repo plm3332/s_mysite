@@ -1,0 +1,17 @@
+<h1>Student Modify</h1><br>
+
+<form action="{% url 'students:modCon' %}" method="post">
+    {% csrf_token %}
+    Name: {{Student.s_name}}
+    <input type="hidden" name="student_name" value={{Student.s_name}}><br>
+    Major:
+    <input type="text" name="student_major" value={{Student.s_major}}><br>
+    Age:
+    <input type="text" name="student_age" value={{Student.s_age}}><br>
+    Grade:
+    <input type="text" name="student_grade" value={{Student.s_grade}}><br>
+    Gender:
+    <input type="text" name="student_gender" value={{Student.s_gender}}><br>
+
+    <input type="submit" value="Modify">
+</form>

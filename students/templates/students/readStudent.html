@@ -1,0 +1,16 @@
+<h1> Student Detail </h1>
+
+{% if Student %}
+<p>
+    Name: {{Student.s_name}}<br>
+    Major: {{Student.s_major}}<br>
+    Age: {{Student.s_age}}<br>
+    Grade: {{Student.s_grade}}<br>
+    Gender: {{Student.s_gender}}<br>
+</p>
+{% else %}
+<p>
+    There is no student.
+</p>
+{% endif %}
+<a href="{% url 'students:stuAll' %}">All Students</a>

@@ -1,0 +1,15 @@
+<h1> Students List </h1><br>
+{% if Students %}
+{% for student in Students %}
+    <li>
+        <a href="{% url 'students:stuDet' student.s_name %}"> {{ student.s_name }} ------------- </a>
+        <a href="{% url 'students:mod' student.s_name %}"> Modify </a>
+        <a href="{% url 'students:del' student.s_name %}"> Delete </a>
+    </li><br>
+{% endfor %}
+{% else %}
+<p>
+    There is no student.
+</p>
+{% endif %}
+<a href="{% url 'students:reg' %}">Register</a>

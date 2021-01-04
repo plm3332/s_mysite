@@ -1,0 +1,17 @@
+<h1>Student Register</h1><br>
+
+<form action="{% url 'students:regCon' %}" method="post">
+    {% csrf_token %}
+    Name:
+    <input type="text" name="student_name"><br>
+    Major:
+    <input type="text" name="student_major"><br>
+    Age:
+    <input type="text" name="student_age"><br>
+    Grade:
+    <input type="text" name="student_grade"><br>
+    Gender:
+    <input type="text" name="student_gender"><br>
+
+    <input type="submit" value="Register">
+</form>
